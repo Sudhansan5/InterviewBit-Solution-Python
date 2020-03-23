@@ -20,4 +20,4 @@ C=[[0, 8, 8, -1],
   [8, 4, 0, 1],
   [-1, -1, 1, 0]]
 B=Solution()
-print(B.Solve(A))
+print(B.Solve(C))
