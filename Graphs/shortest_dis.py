@@ -21,14 +21,13 @@ class Solution:
                     dis[j]=new_dis
                     heapq.heappush(pq,(j,new_dis))
         return dis[D]
-
 A = 6
-B = [   [2, 5, 1],
-        [1, 3, 1] ,
-        [0, 5, 2] ,
-        [0, 2, 2] ,
-        [1, 4, 1] ,
-        [0, 1, 1] ]
+B =[[2, 5, 1],
+    [1, 3, 1],
+    [0, 5, 2],
+    [0, 2, 2],
+    [1, 4, 1],
+    [0, 1, 1]]
 C = 3
 D = 2
 E=Solution()
