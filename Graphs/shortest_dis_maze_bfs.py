@@ -24,14 +24,3 @@ class Solution:
                     q.append((x-row[k],y-col[k]))
 
         return -1 if dis[C[0]][C[1]] == float('inf') else dis[C[0]][C[1]]
-
-A =[[0, 0, 1, 0, 0],
-    [0, 0, 0, 0, 0],
-    [0, 0, 0, 1, 0],
-    [1, 1, 0, 1, 1],
-    [0, 0, 0, 0, 0]]
-
-B = [0, 4]
-C = [4, 4]
-D=Solution()
-print(D.Solve(A,B,C))
