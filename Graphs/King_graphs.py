@@ -1,15 +1,23 @@
 class Solution:
     def Solve(self,A):
         m=len(A)
-        dis=[float('inf')]*m
         for k in range(m):
             for i in range(m):
                 for j in range(m):
                     if A[i][j]==-1:
                         A[i][j]=float('inf')
                     A[i][j]=min(A[i][j],A[i][k]+A[k][j])
-                    dis[i]=A[i][j]
-        return dis.index(max(dis))+1,dis
+        ans=-1
+        max_min_dis=float('inf')
+        for i in range(m):
+            max_dis=float('-inf')
+            for j in range(m):
+                max_dis = max(max_dis,A[i][j])
+            if max_dis < max_min_dis:
+                max_min_dis=max_dis
+                ans=i
+
+        return ans
 
 A=[[0, 6, 8,-1],
    [6, 0, 9 -1],
