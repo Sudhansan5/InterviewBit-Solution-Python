@@ -17,7 +17,7 @@ class Solution:
                 stack.append(ans)
         if not stack:
             return '/'
-        return '/'+'/'.join(stack)
+        return '/'+'/'.join(stack),stack
 
 A="/home//foo/"
 B=Solution()
