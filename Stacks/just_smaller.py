@@ -11,6 +11,6 @@ class Solution:
             ans[i]=-1
         return ans
 
-A=[1]
+A=[10,6,4,2,6,10,11,3,2]
 B=Solution()
 print(B.Solve(A))
