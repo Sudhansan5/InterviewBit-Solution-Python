@@ -35,10 +35,10 @@ class Solution:
         n=len(A)
         B=[0]*(4*n)
         self.build(A,B,0,n-1,0)
-        self.update(A,B,0,n-1,0,0,3)
-        self.query(A,B,0,n-1,0,1,1)
+        self.update(A,B,0,n-1,0,2,3)
+        self.query(A,B,0,n-1,0,2,3)
         return B
 
-A=[9,-8]
+A=[2,3,1,7,6,-1,3]
 B=Solution()
 print(B.Solve(A))
