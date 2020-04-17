@@ -6,28 +6,29 @@ class Solution:
             n>>=1
         return count
 
-    def update(self,A,B,s,e,node,i,val):
+    def update(self,A,B,s,e,node,i):
         if s==e:
-            A[i]=val
-            B[node]=val
+            A[i]+=1
+            B[node]+=1
             return
         mid=(s+e)//2
         if i > mid:
-            self.update(A,B,mid+1,e,2*node+2,i,self.count(2*A[i]+1))
+            self.update(A,B,mid+1,e,2*node+2,i)
         else:
-            self.update(A,B,s,mid,2*node+1,i,self.count(2*A[i]+1))
+            self.update(A,B,s,mid,2*node+1,i)
         B[node]=B[2*node+1]+B[2*node+2]
 
-    def update1(self,A,B,s,e,node,i,val):
+    def update1(self,A,B,s,e,node,i):
         if s==e:
-            A[i]=val
-            B[node]=val
+            if B[node] > 0:
+                A[i]=val
+                B[node]=val
             return
         mid=(s+e)//2
         if i > mid:
-            self.update(A,B,mid+1,e,2*node+2,i,self.count(A[i]//2))
+            self.update(A,B,mid+1,e,2*node+2,i)
         else:
-            self.update(A,B,s,mid,2*node+1,i,self.count(A[i]//2))
+            self.update(A,B,s,mid,2*node+1,i)
         B[node]=B[2*node+1]+B[2*node+2]
 
     def query(self,A,B,s,e,l,r,node):
@@ -47,9 +48,9 @@ class Solution:
         res=[]
         for i,j,k in B:
             if i==1:
-                self.update(arr,ans,0,A-1,0,j-1,j-1)
+                self.update(arr,ans,0,A-1,0,j-1)
             elif i==2:
-                self.update1(arr,ans,0,A-1,0,j-1,j-1)
+                self.update1(arr,ans,0,A-1,0,j-1)
             else:
                 b=self.query(arr,ans,0,A-1,j-1,k-1,0)
                 res.append(b)
