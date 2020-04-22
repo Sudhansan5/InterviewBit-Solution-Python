@@ -8,12 +8,9 @@ class Solution:
     def find_height(self,A):
         if not A:
             return 0
-        ht1=self.find_height(A.left)
-        ht2=self.find_height(A.right)
-        if ht1 > ht2:
-            return ht1+1
-        else:
-            return ht2+1
+        h1=self.find_height(A.left)
+        h2=self.find_height(A.right)
+        return max(h1,h2)+1
 
 root=Node(1)
 root.left=Node(2)

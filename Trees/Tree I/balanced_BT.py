@@ -5,16 +5,25 @@ class Node:
         self.right=None
 
 class Solution:
-    def isBalanced(self,A):
+    def __init__(self):
+        self.ans=0
+
+    def height(self,A):
         if not A:
             return 0
-        else:
-            h1=self.isBalanced(A.left)
-            h2=self.isBalanced(A.right)
-            if abs(h1-h2) <= 1:
-                return 1
-            else:
-                return 0
+        l=self.height(A.left)
+        r=self.height(A.right)
+        self.ans=max(self.ans,abs(l-r))
+        return max(l,r)+1
+
+    def isBalanced(self,A):
+        if not A:
+            return 1
+        self.height(A)
+        if self.ans > 0:
+            return 0
+        return 1
+
 root=Node(1)
 root.left=Node(2)
 root.right=Node(3)

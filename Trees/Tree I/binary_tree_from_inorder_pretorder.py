@@ -8,10 +8,10 @@ class Solution:
     def buildTree(self,A,B):
         if not A or not B:
             return
-        node=Node(B.pop())
-        index=A.index(node.val)
-        node.right=self.buildTree(A[index+1:],B)
-        node.left=self.buildTree(A[:index],B)
+        node=Node(A.pop(0))
+        index=B.index(node.val)
+        node.left=self.buildTree(A,B[:index])
+        node.right=self.buildTree(A,B[index+1:])
         return node
 
     def print_node(self,root):
@@ -20,8 +20,8 @@ class Solution:
             self.print_node(root.left)
             self.print_node(root.right)
 
-A=[2,1,3]
-B=[2,3,1]
+A=[1,2,3]
+B=[2,1,3]
 C=Solution()
 D=C.buildTree(A,B)
 C.print_node(D)
