@@ -21,7 +21,6 @@ class Solution:
                 curr=curr.right
         return ans
 
-
     def inorder_recursive(self,root,aux):
         if not root:
             return
@@ -34,8 +33,8 @@ root.left=Node(2)
 root.right=Node(3)
 root.left.left=Node(4)
 root.left.right=Node(5)
-root.left.left.left=Node(6)
-root.left.left.right=Node(7)
+root.right.left=Node(6)
+root.right.right=Node(7)
 A=Solution()
 B=[]
 A.inorder_recursive(root,B)
