@@ -10,7 +10,7 @@ class Solution:
             return 0
         if A.val==val:
             return 1
-        if (A.left and self.find(A.left,val) )or (A.right and self.find(A.right,val)):
+        if (A.left and self.find(A.left,val)) or (A.right and self.find(A.right,val)):
             return 1
         return 0
 
@@ -43,5 +43,5 @@ root.right.right.left = Node(3)
 root.right.right.right = Node(4)
 A=Solution()
 B=10
-C=5
+C=4
 print(A.Solve(root,B,C))

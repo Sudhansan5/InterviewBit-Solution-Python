@@ -18,6 +18,7 @@ class Solution:
             return curr
         l=self.check_bst(A.left)
         r=self.check_bst(A.right)
+        print(l.min,l.isBST,l.max)
         curr.min = min(A.val,l.min)
         curr.max = max(A.val,r.max)
 
