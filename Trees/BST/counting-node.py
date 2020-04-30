@@ -26,6 +26,5 @@ root.left=Node(5)
 root.right=Node(2)
 root.right.left=Node(3)
 root.right.right=Node(6)
-
 A=Solution()
 print(A.Solve(root))
