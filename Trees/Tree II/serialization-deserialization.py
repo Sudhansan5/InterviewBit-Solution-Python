@@ -9,12 +9,12 @@ class Solution:
         self.ans=[]
 
     def serialization(self,A):
-        if A:
-            self.ans.append(str(A.val))
-            self.serialization(A.left)
-            self.serialization(A.right)
-        else:
+        if not A:
             self.ans.append(str(-1))
+            return
+        self.ans.append(str(A.val))
+        self.serialization(A.left)
+        self.serialization(A.right)
 
     def deserialization(self,A):
         val=int(next(A))
