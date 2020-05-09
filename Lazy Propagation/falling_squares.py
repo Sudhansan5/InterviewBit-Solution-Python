@@ -7,6 +7,7 @@ class Solution:
             height[i]=max(height[i],h)
 
     def Solve(self,A):
+        #co-ordinate compression
         cords=set()
         for l,s in A:
             r=l+s-1
