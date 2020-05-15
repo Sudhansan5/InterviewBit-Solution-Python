@@ -18,7 +18,7 @@ class Solution:
             return 0
 
         h = int(math.log2(n))
-        last = (1 << h)
+        last = (1 << h) #2^h
         curr = n - ((1 << h) - 1)
         if curr >= last//2:
             return (1 << h) - 1
