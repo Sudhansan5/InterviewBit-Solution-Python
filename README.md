@@ -1,1 +1,1 @@
-# Scaler-Academy-Solution Python
+# Interviewbit-Solution Python
