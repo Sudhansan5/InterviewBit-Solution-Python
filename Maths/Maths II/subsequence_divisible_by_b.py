@@ -22,7 +22,7 @@ class Solution:
                     ans += freq[i] * (freq[i]-1) * freq[rem] // 2
 
                 elif i == rem:
-                    ans + freq[i] * (freq[i] - 1) * freq[j] // 2
+                    ans += freq[i] * (freq[i] - 1) * freq[j] // 2
 
                 elif j == rem:
                     ans += freq[j] * (freq[j] - 1) * freq[i] // 2
