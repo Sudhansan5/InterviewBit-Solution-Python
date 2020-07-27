@@ -25,7 +25,7 @@ class Trie:
             if w[i] not in head.child:
                 return False
             head = head.child[w[i]]
-        return True if head.terminal == True else False
+        return True if head.terminal else False
 
 A=['apple','app','appie']
 B=Trie()
