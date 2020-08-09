@@ -2,7 +2,9 @@ class Solution:
     def dp(self,A,i,_sum, size,res,aux):
         if aux[i][_sum][size]:
             return aux[i][_sum][size]
+
         if size == 0:
+
             return _sum == 0
         if i >= len(A):
             return False

@@ -11,7 +11,7 @@ class Solution:
 
         for i in range(lim+1):
             ans += self.dp(A,n,pos+1, 1 if i < A[pos] else flag,
-                           1 if self.isPalindrome(A) else palindrome, dp)
+                           1 if self.isPalindrome("".join(str(A))) else palindrome, dp)
 
         return ans
 

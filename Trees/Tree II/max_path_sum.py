@@ -5,9 +5,6 @@ class Node:
         self.right=None
 
 class Solution:
-    def __init__(self):
-        self.ans=float('-inf')
-
     def path_sum(self,A):
         if not A:
             return 0
@@ -17,6 +14,7 @@ class Solution:
         return max(l,r,0)+A.val
 
     def Solve(self,A):
+        self.ans = float('-inf')
         self.path_sum(A)
         return self.ans
 
