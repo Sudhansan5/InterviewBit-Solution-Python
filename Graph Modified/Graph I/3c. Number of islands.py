@@ -1,4 +1,5 @@
 from collections import deque
+from ordered_set import OrderedSet
 class Solution:
     def isValid(self, A, row, col):
         if row < 0 or row >= len(A) or col < 0 or col >= len(A[0]):
