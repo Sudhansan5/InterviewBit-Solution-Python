@@ -4,7 +4,7 @@ from heapq import heappush, heappop
 class Solution:
     def Solve(self, A, B, C):
         graph = defaultdict(list)
-        
+
         for i, j, k in B:
             graph[i].append((j, k))
             graph[j].append((i, k))
@@ -41,6 +41,7 @@ if __name__ == '__main__':
          [0, 1, 1],
          [4, 5, 7],
          [0, 5, 1]]
+
     C = 4
     D = Solution()
     print(D.Solve(A, B, C))
